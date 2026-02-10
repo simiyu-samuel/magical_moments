@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTestimonialSlider();
     initContactForm();
     initScrollToTop();
+    initFAQ();
     
     console.log('✅ All features initialized');
 });
@@ -390,7 +391,7 @@ function initScrollToTop() {
     if (!scrollBtn) return;
 
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 500) {
+        if (window.scrollY > 300) {
             scrollBtn.classList.add('show');
         } else {
             scrollBtn.classList.remove('show');
@@ -443,3 +444,31 @@ window.addEventListener('load', function() {
 });
 
 console.log('🎉 All scripts loaded successfully!');
+
+
+// ==============================================
+// FAQ ACCORDION
+// ==============================================
+function initFAQ() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    if (!faqItems.length) return;
+    
+    faqItems.forEach(function(item) {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', function() {
+            // Close other items
+            faqItems.forEach(function(otherItem) {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+    
+    console.log('✅ FAQ accordion ready');
+}
