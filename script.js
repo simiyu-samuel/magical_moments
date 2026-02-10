@@ -318,7 +318,7 @@ function initTestimonialSlider() {
 }
 
 // ==============================================
-// CONTACT FORM
+// CONTACT FORM - SEND VIA WHATSAPP
 // ==============================================
 function initContactForm() {
     const form = document.querySelector('.contact-form');
@@ -329,30 +329,57 @@ function initContactForm() {
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        const submitBtn = form.querySelector('.submit-btn');
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
-        submitBtn.disabled = true;
-
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const service = document.getElementById('service').value;
+        const message = document.getElementById('message').value;
+        
+        // Get service name
+        const serviceNames = {
+            'wedding': 'Wedding Photography',
+            'portrait': 'Portrait Session',
+            'event': 'Event Coverage',
+            'family': 'Family & Maternity'
+        };
+        const serviceName = serviceNames[service] || service;
+        
+        // Construct WhatsApp message
+        let whatsappMessage = `*New Booking Request*%0A%0A`;
+        whatsappMessage += `*Name:* ${name}%0A`;
+        whatsappMessage += `*Email:* ${email}%0A`;
+        if (phone) {
+            whatsappMessage += `*Phone:* ${phone}%0A`;
+        }
+        whatsappMessage += `*Service:* ${serviceName}%0A%0A`;
+        whatsappMessage += `*Message:*%0A${message}`;
+        
+        // WhatsApp number (without + or spaces)
+        const whatsappNumber = '254713541293';
+        
+        // Create WhatsApp URL
+        const whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+        
+        // Open WhatsApp in new tab
+        window.open(whatsappURL, '_blank');
+        
+        // Show success message
+        if (messageDiv) {
+            messageDiv.className = 'form-message success';
+            messageDiv.textContent = 'Redirecting to WhatsApp... Please send the message to complete your booking request.';
+            setTimeout(function() {
+                messageDiv.className = 'form-message';
+            }, 5000);
+        }
+        
+        // Reset form after a short delay
         setTimeout(function() {
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-            
-            if (messageDiv) {
-                messageDiv.className = 'form-message success';
-                messageDiv.textContent = 'Thank you! We will get back to you soon.';
-                setTimeout(function() {
-                    messageDiv.className = 'form-message';
-                }, 5000);
-            } else {
-                alert('Thank you! We will get back to you soon.');
-            }
-            
             form.reset();
-        }, 1500);
+        }, 1000);
     });
 
-    console.log('✅ Contact form ready');
+    console.log('✅ Contact form ready (WhatsApp integration)');
 }
 
 // ==============================================
