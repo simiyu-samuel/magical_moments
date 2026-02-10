@@ -1485,9 +1485,14 @@ body.loaded .loader-content {
         min-height: 600px;
     }
     
+    .hero-bg-overlay {
+        background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(8, 8, 8, 0.5) 100%);
+    }
+    
     .hero-title h1 {
         font-size: clamp(3rem, 12vw, 6rem);
         line-height: 0.9;
+        -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
     }
     
     .hero-subtext {
@@ -1496,9 +1501,15 @@ body.loaded .loader-content {
     }
     
     .hero-image-wrapper {
-        width: 60%;
-        height: 65%;
-        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+        width: 70%;
+        height: 70%;
+        clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+        z-index: 0;
+    }
+    
+    .hero-content {
+        z-index: 10;
+        position: relative;
     }
     
     .scroll-btn {
@@ -1755,26 +1766,50 @@ body.loaded .loader-content {
         max-width: 100vw;
     }
     
+    .hero-bg-overlay {
+        background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(8, 8, 8, 0.4) 100%);
+    }
+    
     .hero-title h1 {
         font-size: clamp(2.2rem, 13vw, 3.5rem);
         line-height: 0.95;
+        -webkit-text-stroke: 2px rgba(255, 255, 255, 0.6);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    
+    .hero-title h1 span {
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
     
     .hero-subtext {
         font-size: 0.85rem;
         padding: 0 20px;
         margin-top: 15px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     }
     
     .hero-image-wrapper {
-        width: 80%;
-        height: 60%;
+        width: 85%;
+        height: 75%;
+        clip-path: none;
+        border-radius: 20px;
+        opacity: 0.7;
+    }
+    
+    .hero-img {
+        filter: grayscale(20%) brightness(0.9) contrast(1.1);
+    }
+    
+    .hero-content {
+        z-index: 10;
+        position: relative;
     }
     
     .scroll-btn {
         bottom: 20px;
         font-size: 0.75rem;
         gap: 10px;
+        z-index: 10;
     }
     
     .scroll-icon {
@@ -2139,4 +2174,26 @@ body.loaded .loader-content {
     input, select, textarea { font-size: 16px !important; } 
     
     .cursor-dot, .cursor-outline { display: none !important; } /* Always hide cursor on small touch screens */
+}
+
+/* Extra Small Mobile - Enhanced Hero Visibility */
+@media (max-width: 360px) {
+    .hero {
+        min-height: 500px;
+    }
+    
+    .hero-image-wrapper {
+        width: 90%;
+        height: 70%;
+        opacity: 0.8;
+    }
+    
+    .hero-title h1 {
+        font-size: clamp(1.8rem, 13vw, 3rem);
+        -webkit-text-stroke: 2px rgba(255, 255, 255, 0.7);
+    }
+    
+    .hero-subtext {
+        font-size: 0.8rem;
+    }
 }
