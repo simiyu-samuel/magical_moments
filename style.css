@@ -334,6 +334,7 @@ body.loaded .loader-content {
     transition: var(--transition);
     animation: heroImageFloat 20s ease-in-out infinite;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    z-index: 2;
 }
 
 @keyframes heroImageFloat {
@@ -357,7 +358,7 @@ body.loaded .loader-content {
 
 .hero-content {
     position: relative;
-    z-index: 10;
+    z-index: 5;
     text-align: center;
 }
 
@@ -1504,7 +1505,7 @@ body.loaded .loader-content {
         width: 70%;
         height: 70%;
         clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
-        z-index: 0;
+        z-index: 2;
     }
     
     .hero-content {
@@ -1794,6 +1795,12 @@ body.loaded .loader-content {
         clip-path: none;
         border-radius: 20px;
         opacity: 0.7;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: none;
     }
     
     .hero-img {
@@ -2186,6 +2193,11 @@ body.loaded .loader-content {
         width: 90%;
         height: 70%;
         opacity: 0.8;
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     
     .hero-title h1 {
