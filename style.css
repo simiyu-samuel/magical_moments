@@ -541,6 +541,36 @@ body.loaded .loader-content {
     box-shadow: 0 5px 20px rgba(212, 175, 55, 0.3);
 }
 
+.shuffle-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white);
+    padding: 12px 30px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    border-radius: 5px;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shuffle-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.shuffle-btn i {
+    transition: transform 0.3s ease;
+}
+
+.shuffle-btn:hover i {
+    transform: rotate(180deg);
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -1609,6 +1639,11 @@ body.loaded .loader-content {
         font-size: 0.85rem;
     }
     
+    .shuffle-btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+    
     /* About */
     .about-content {
         flex-direction: column;
@@ -1920,6 +1955,16 @@ body.loaded .loader-content {
         padding: 8px 12px;
         font-size: 0.75rem;
         letter-spacing: 0.5px;
+    }
+    
+    .shuffle-btn {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+        gap: 5px;
+    }
+    
+    .shuffle-btn span {
+        display: none;
     }
     
     .grid {

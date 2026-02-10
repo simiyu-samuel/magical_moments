@@ -519,3 +519,87 @@ function initLoadMore() {
 window.addEventListener('load', function() {
     initLoadMore();
 });
+
+
+// ==============================================
+// SHUFFLE GALLERY IMAGES
+// ==============================================
+function shuffleGallery() {
+    const grid = document.querySelector('.grid');
+    if (!grid) return;
+    
+    // Get all grid items
+    const items = Array.from(grid.querySelectorAll('.grid-item'));
+    
+    if (items.length === 0) return;
+    
+    // Shuffle array using Fisher-Yates algorithm
+    for (let i = items.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [items[i], items[j]] = [items[j], items[i]];
+    }
+    
+    // Clear the grid
+    grid.innerHTML = '';
+    
+    // Append shuffled items back
+    items.forEach(function(item) {
+        grid.appendChild(item);
+    });
+    
+    // Re-initialize Isotope if available
+    if (typeof Isotope !== 'undefined') {
+        setTimeout(function() {
+            const iso = new Isotope(grid, {
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                masonry: { columnWidth: '.grid-item' }
+            });
+            
+            // Re-attach filter functionality
+            const filters = document.querySelectorAll('.filter-btn');
+            filters.forEach(function(f) {
+                f.addEventListener('click', function(e) {
+                    filters.forEach(function(btn) {
+                        btn.classList.remove('active');
+                    });
+                    e.target.classList.add('active');
+                    const filterValue = e.target.getAttribute('data-filter');
+                    iso.arrange({ filter: filterValue });
+                });
+            });
+        }, 100);
+    }
+    
+    console.log('✅ Gallery shuffled');
+}
+
+// Shuffle on page load
+window.addEventListener('load', function() {
+    shuffleGallery();
+    
+    // Add click handler for shuffle button
+    const shuffleBtn = document.getElementById('shuffleBtn');
+    if (shuffleBtn) {
+        shuffleBtn.addEventListener('click', function() {
+            // Add animation effect
+            this.style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 300);
+            
+            // Shuffle the gallery
+            shuffleGallery();
+            
+            // Reset filter to "All Photos"
+            const filters = document.querySelectorAll('.filter-btn');
+            filters.forEach(function(btn) {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-filter') === '*') {
+                    btn.classList.add('active');
+                }
+            });
+        });
+        console.log('✅ Shuffle button ready');
+    }
+});
