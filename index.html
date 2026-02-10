@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Magical Moments - Professional Photography for Weddings, Portraits, and Events">
+    <title>Magical Moments | Photography</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,600&family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GLightbox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Shutter Preloader -->
+    <div id="preloader">
+        <div class="shutter-top"></div>
+        <div class="shutter-bottom"></div>
+        <div class="loader-content">
+            <div class="loader-text">MAGICAL MOMENTS</div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-container">
+        <div class="logo">MAGICAL MOMENTS<span>.</span></div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#portfolio" class="nav-link">Gallery</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+            <li><a href="#contact" class="nav-link btn-contact">Book Session</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-image-wrapper">
+            <img src="img/WhatsApp Image 2026-02-10 at 10.32.10 (1).jpeg" alt="Magical Moments Photography" class="hero-img">
+        </div>
+        <div class="hero-content">
+            <div class="hero-title">
+                <h1 class="split-text" data-aos="fade-up">CAPTURING<br><span>MEMORIES</span></h1>
+                <div class="hero-subtext" data-aos="fade-up" data-aos-delay="200">Professional Photography for Every Occasion</div>
+            </div>
+            <a href="#portfolio" class="scroll-btn" data-aos="fade-up" data-aos-delay="400">
+                <span>Discover</span>
+                <div class="scroll-icon"></div>
+            </a>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-element element-1"></div>
+        <div class="floating-element element-2"></div>
+        <div class="floating-element element-3"></div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">PORTFOLIO</span>
+                <h2>Our Gallery</h2>
+                <p>Moments that last forever</p>
+            </div>
+
+            <div class="filter-wrap" data-aos="fade-up" data-aos-delay="200">
+                <button class="filter-btn active" data-filter="*">All Photos</button>
+                <button class="filter-btn" data-filter=".wedding">Weddings</button>
+                <button class="filter-btn" data-filter=".portrait">Portraits</button>
+                <button class="filter-btn" data-filter=".event">Events</button>
+            </div>
+
+            <div class="grid">
+                <!-- Wedding Photos -->
+                <div class="grid-item wedding" data-aos="fade-up" data-aos-delay="100">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.31.39.jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.31.39.jpeg" alt="Wedding Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Wedding Bliss</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item portrait" data-aos="fade-up" data-aos-delay="150">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.31.40.jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.31.40.jpeg" alt="Portrait Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Portrait Session</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item event" data-aos="fade-up" data-aos-delay="200">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.31.41.jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.31.41.jpeg" alt="Event Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Special Event</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item wedding" data-aos="fade-up" data-aos-delay="100">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.31.49.jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.31.49.jpeg" alt="Wedding Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Ceremony Moments</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item portrait" data-aos="fade-up" data-aos-delay="150">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.31.50 (1).jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.31.50 (1).jpeg" alt="Portrait Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Beautiful Portrait</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item event" data-aos="fade-up" data-aos-delay="200">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.31.50.jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.31.50.jpeg" alt="Event Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Celebration</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item wedding" data-aos="fade-up" data-aos-delay="100">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.32.03.jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.32.03.jpeg" alt="Wedding Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Love Story</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item portrait" data-aos="fade-up" data-aos-delay="150">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.32.04.jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.32.04.jpeg" alt="Portrait Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Elegant Portrait</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item event" data-aos="fade-up" data-aos-delay="200">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.32.06 (1).jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.32.06 (1).jpeg" alt="Event Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Event Highlights</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Continue with remaining images... -->
+                <div class="grid-item wedding" data-aos="fade-up" data-aos-delay="100">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.32.06.jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.32.06.jpeg" alt="Wedding Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Wedding Day</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item portrait" data-aos="fade-up" data-aos-delay="150">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.32.07.jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.32.07.jpeg" alt="Portrait Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Studio Portrait</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item event" data-aos="fade-up" data-aos-delay="200">
+                    <a href="img/WhatsApp Image 2026-02-10 at 10.32.09.jpeg" class="glightbox" data-gallery="gallery1">
+                        <div class="img-container">
+                            <img src="img/WhatsApp Image 2026-02-10 at 10.32.09.jpeg" alt="Event Photography" loading="lazy">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <i class="fas fa-search-plus"></i>
+                                    <h3>Party Time</h3>
+                                    <p>Click to view</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="load-more-wrap" data-aos="fade-up">
+                <button class="load-more-btn">Load More Photos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <div class="section-header">
+                        <span class="section-tag">ABOUT US</span>
+                        <h2>About Magical Moments</h2>
+                        <p>Capturing life's precious memories</p>
+                    </div>
+                    <p>At Magical Moments, we believe every moment tells a story. With over a decade of experience in professional photography, we specialize in capturing the emotions, beauty, and authenticity of your most cherished occasions.</p>
+                    <p>Our passion is to create timeless images that you'll treasure for generations. Whether it's a wedding, portrait session, or special event, we bring creativity, professionalism, and a keen eye for detail to every shoot.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="counter" data-target="500">0</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="counter" data-target="10">0</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat" data-aos="fade-up" data-aos-delay="300">
+                            <h3 class="counter" data-target="1000">0</h3>
+                            <p>Events Covered</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left">
+                    <div class="image-wrapper">
+                        <img src="img/kara.jpeg" alt="About Magical Moments">
+                        <div class="image-frame"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">SERVICES</span>
+                <h2>Our Services</h2>
+                <p>Professional photography for every occasion</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3>Wedding Photography</h3>
+                    <p>Capture every magical moment of your special day with our comprehensive wedding photography packages.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Full-day coverage</li>
+                        <li><i class="fas fa-check"></i> Professional editing</li>
+                        <li><i class="fas fa-check"></i> Online gallery</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Portrait Sessions</h3>
+                    <p>Professional portraits for individuals, families, and corporate headshots that showcase your personality.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Studio or outdoor</li>
+                        <li><i class="fas fa-check"></i> Wardrobe changes</li>
+                        <li><i class="fas fa-check"></i> Retouched photos</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Event Coverage</h3>
+                    <p>From corporate events to birthday parties, we document your celebrations with style and professionalism.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Candid moments</li>
+                        <li><i class="fas fa-check"></i> Fast delivery</li>
+                        <li><i class="fas fa-check"></i> Unlimited shots</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Family & Maternity</h3>
+                    <p>Beautiful family portraits and maternity shoots that celebrate life's precious milestones.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Natural poses</li>
+                        <li><i class="fas fa-check"></i> Props included</li>
+                        <li><i class="fas fa-check"></i> Printed albums</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">TESTIMONIALS</span>
+                <h2>What Our Clients Say</h2>
+                <p>Real stories from real people</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card active" data-aos="fade-up" data-aos-delay="100">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Magical Moments truly lived up to their name! Our wedding photos are absolutely stunning. They captured every emotion perfectly and made us feel so comfortable throughout the day."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+Michael&background=d4af37&color=fff" alt="Sarah & Michael">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah & Michael</h4>
+                            <span>Wedding Clients</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">★★★★★</div>
+                    <p>"Professional, creative, and so easy to work with. Our family portraits turned out better than we could have imagined! Every single family member loved the results."</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://ui-avatars.com/api/?name=Johnson+Family&background=d4af37&color=fff" alt="The Johnson Family">
+                        </div>
+                        <div class="author-info">
+                            <h4>The Johnson Family</h4>
+                            <span>Portrait Session</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                    <div class="stars">★★★★★</div>
+                    <p>"They made our corporate event look amazing. The photos were delivered quickly and exceeded all expectations. Highly professional and talented team!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://ui-avatars.com/api/?name=David+Chen&background=d4af37&color=fff" alt="David Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>David Chen</h4>
+                            <span>Corporate Event</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-nav">
+                <button class="nav-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">CONTACT</span>
+                <h2>Book Your Session</h2>
+                <p>Let's create magical moments together</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+1234567890">+1 (234) 567-890</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:info@magicalmoments.com">info@magicalmoments.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>123 Photography Lane<br>Studio City, ST 12345</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" data-aos="fade-left">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Phone Number">
+                            <label for="phone">Phone</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="service" required>
+                                <option value="">Select Service</option>
+                                <option value="wedding">Wedding Photography</option>
+                                <option value="portrait">Portrait Session</option>
+                                <option value="event">Event Coverage</option>
+                                <option value="family">Family & Maternity</option>
+                            </select>
+                            <label for="service">Service</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Tell us about your event..." rows="5" required></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    
+                    <div class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">MAGICAL MOMENTS<span>.</span></div>
+                <p>&copy; 2026 Magical Moments Photography. All rights reserved.</p>
+    
+                    <p>Designed & Developed by <a href="https://simiyu-samuel.vercel.app" target="_blank" rel="noopener noreferrer" class="dev-link">Simiyu Samuel</a></p>
+                    <div class="dev-links">
+                        <a href="https://github.com/simiyu-samuel" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="dev-icon" title="View GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://simiyu-samuel.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Portfolio Website" class="dev-icon" title="Visit Portfolio">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="script.js"></script>
+</body>
+</html>
