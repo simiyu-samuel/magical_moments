@@ -1,0 +1,16 @@
+# Ignore large files
+*.exe
+*.zip
+*.rar
+*.7z
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore node modules if any
+node_modules/
