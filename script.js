@@ -472,3 +472,50 @@ function initFAQ() {
     
     console.log('✅ FAQ accordion ready');
 }
+
+
+// ==============================================
+// LOAD MORE GALLERY IMAGES
+// ==============================================
+function initLoadMore() {
+    const loadMoreBtn = document.querySelector('.load-more-btn');
+    const hiddenItems = document.querySelectorAll('.grid-item.hidden');
+    
+    if (!loadMoreBtn || !hiddenItems.length) {
+        // Hide button if no hidden items
+        if (loadMoreBtn) {
+            loadMoreBtn.parentElement.style.display = 'none';
+        }
+        return;
+    }
+    
+    loadMoreBtn.addEventListener('click', function() {
+        // Show all hidden items
+        hiddenItems.forEach(function(item) {
+            item.classList.remove('hidden');
+        });
+        
+        // Re-layout Isotope if available
+        const grid = document.querySelector('.grid');
+        if (grid && typeof Isotope !== 'undefined') {
+            const iso = Isotope.data(grid);
+            if (iso) {
+                setTimeout(function() {
+                    iso.layout();
+                }, 100);
+            }
+        }
+        
+        // Hide the load more button
+        loadMoreBtn.parentElement.style.display = 'none';
+        
+        console.log('✅ Loaded all gallery images');
+    });
+    
+    console.log('✅ Load more button ready');
+}
+
+// Initialize on load
+window.addEventListener('load', function() {
+    initLoadMore();
+});
